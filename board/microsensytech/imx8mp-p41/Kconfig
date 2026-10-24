@@ -1,0 +1,39 @@
+if TARGET_MICROSENSYTECH_IMX8MP_P41
+
+config IMX_CONFIG
+	default "board/microsensytech/imx8mp-p41/imximage.cfg"
+
+config SYS_BOARD
+	default "imx8mp-p41"
+
+config SYS_CONFIG_NAME
+	default "microsensytech-imx8mp-p41"
+
+config SYS_VENDOR
+	default "microsensytech"
+
+config TDX_CFG_BLOCK
+	default y
+
+config TDX_CFG_BLOCK_2ND_ETHADDR
+	default y
+
+config TDX_CFG_BLOCK_DEV
+	default "0"
+
+# Toradex config block in eMMC, at the end of 1st "boot sector"
+config TDX_CFG_BLOCK_OFFSET
+	default "-512"
+
+config TDX_CFG_BLOCK_PART
+	default "1"
+
+config TDX_HAVE_EEPROM_EXTRA
+	default y
+
+config TDX_HAVE_MMC
+	default y
+
+source "board/microsensytech/common/Kconfig"
+
+endif
